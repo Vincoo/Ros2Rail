@@ -49,3 +49,4 @@ def initialize_ros2rail(ip, description_param=None, anon=False, name=None):
     links = rail_util.links_from_transform(robot,rail_dict)
     rail_util.send_data_to_rail(links,rail_dict)
     rail_cad.create_stl_representation(robot,rail_dict)
+    return robot, rail_dict
